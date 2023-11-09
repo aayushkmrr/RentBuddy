@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+            margin:0px;
+        }
+    .loginPage{
+        display:flex;
+       align-items: center;
+        width:97vw;
+        height:99vh;
+        background-color: rgba(69, 123, 157, 1);
+    }
+    .circle {
+        /* margin-top:30px; */
+        width:500px;
+        height:600px;
+        border-top-right-radius: 295px;
+        border-bottom-right-radius: 295px;
+        border-color: white;
+        border-style: double;
+        background-color: white;
+        box-shadow: inset;
+    }
+    .circle img{
+        margin-top: 60px;
+        border-radius: 200px;
+    }
+    .container{
+        margin:10vh;
+        align-items: center;
+    }
+    form{
+        
+        margin:10vh;
+        margin-bottom: 20px;
+    }
+    form input{
+        
+     padding:20px;
+     margin:10px;
+     width:30vw;
+     border-radius: 5px;
+    }
+    form label{
+        /* font-weight: bold; */
+        font-size: larger;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    button{
+        
+        margin-left: 15vw;
+        padding:15px;
+        width:15vw;
+        border-radius: 5px;
+        background-color: #FFBA08;
+    }
+    p,h1{
+        padding: 20px;
+        margin-left:15vw;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    h1{
+        font-size: 7vh;
+    }
+
+    
+    </style>
+    <section class="loginPage">
+    <div class="circle">
+        
+           <img src="/WhatsApp Image 2023-11-04 at 3.07.32 PM.jpeg" width="400px" height="500px">
+       
+    </div>
+    <div class="container">
+       
+        <h1>Login</h1>
+        <form onsubmit="submitForm(event)">
+                <label for="fname">Username:</label><br>
+                <input type="text" id="fname" name="fname" placeholder="your Username"><br>
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password" placeholder="password">
+            </form>
+            <button>Login </button>
+            <p>New to RentBuddy ? <a href="#">Signup</a></p>
+       
+    </div>
+</section>
+<script>
+function submitForm(event){
+    event.preventDefault();
+
+    const name=document.getElementById('name').value
+    const password=document.getElementById('password').value
+}
+</script>
+</body>
+</html>
