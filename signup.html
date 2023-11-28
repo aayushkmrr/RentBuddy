@@ -108,7 +108,7 @@ function submitForm(event){
         headers:{
             'content-Type':'application/json'
         },
-        body:JSON.stringify({name,goals})
+        body:JSON.stringify({name,contact,username,password})
      })
      .then(response=>response.json())
      .then(data=>console.log(data))
