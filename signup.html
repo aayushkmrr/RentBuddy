@@ -89,8 +89,9 @@
                 <input type="text" id="name" name="name" placeholder="your username"><br>
                 <label for="password">Password:</label><br>
                 <input type="password" id="password" name="password" placeholder="password"><br>
+                <button type="submit">signup </button>
             </form>
-            <button>signup </button>
+          
            
        
     </div>
@@ -103,12 +104,15 @@ function submitForm(event){
     const contact=document.getElementById('number').value
     const username=document.getElementById('name').value
     const password=document.getElementById('password').value
-     fetch('',{
+
+
+
+     fetch('http://localhost:3000/databaseaction/signupnew',{
         method:'POST',
         headers:{
-            'content-Type':'application/json'
+            'Content-Type': 'application/json'
         },
-        body:JSON.stringify({name,contact,username,password})
+        body: JSON.stringify({name,contact,username,password})
      })
      .then(response=>response.json())
      .then(data=>console.log(data))
